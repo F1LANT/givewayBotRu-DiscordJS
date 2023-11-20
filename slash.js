@@ -8,14 +8,14 @@ const commands = [
     }
 ];
 
-const rest = new REST({ version: '10' }).setToken("MTE3NTk1NTY4MDU2MjI1Mzg1NA.GeTLsg.zGElUH78VltdRjh6IbW17yCLJp_rHKAvrh5Frc");
+const rest = new REST({ version: '10' }).setToken("ТОКЕН");
 
 (async () => {
     try {
         console.log('Начало регистрации слеш-команд (/) для бота.');
 
         await rest.put(
-            Routes.applicationGuildCommands("1175955680562253854", "1169194180703166464"),
+            Routes.applicationGuildCommands("ИД ПРИЛОЖЕНИЯ", "ИД СЕРВЕРА"),
             { body: commands },
         );
 
